@@ -1,16 +1,22 @@
-class LC37:
-    def student(self, name):
-        self.name = name
-    def display(self):
-        print("The name is {}".format(self.name))
-    def nature(self):
-        print("{} is a good student".format(self.name))
+import pandas as pd
+import csv
+df = pd.read_csv(r'C:\Users\abhij\Desktop\Placement_Trainign_Dlithe\day_14\filename.csv')
 
-a1 = LC37()
-a2 = LC37()
-a1.student("Abhijith")
-a2.student("Adarsh")
-a1.display()
-a2.display()
-a1.nature()
+df.head()
+print("---------------------------------------------------")
+print(df.head(5))
+print("---------------------------------------------------")
+df.tail()
+print("---------------------------------------------------")
+print(df.tail(5))
+print("---------------------------------------------------")
 
+
+print(df)
+
+print("---------------------------------------------------")
+print(df['Name'])
+print("---------------------------------------------------")
+print(df['Name'][2])
+print("---------------------------------------------------")
+print(df['Name'][2:5])
